@@ -3,33 +3,29 @@ import Company from './Components/Pages/Company'
 import Contato from './Components/Pages/Contato'
 import Newproject from './Components/Pages/Newproject'
 
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {BrowserRouter as Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+/*import {BrowserRouter as Switch} from 'react-router-dom'; não é mais utilizado, substituido pelo Routes*/
 
 
 function App() {
   return (
     <Router>
-      <ul>
-      <li>Home</li>
-      <li>Company</li>
-      <li>Contato</li>
-      <li>Novo Projeto</li>
-      </ul>
+      <Home/>
+      
       <Switch>
-      <Route exact path='Home'>
+      <Route exact path='/'>
       <Home/>
       </Route>
 
-      <Route path='Company'>
+      <Route path='/Company'>
       <Company/>
       </Route>
 
-      <Route path='Contato'>
+      <Route path='/Contato'>
       <Contato/>
       </Route>
 
-      <Route exact path='Novo_Projeto'>
+      <Route path='/Newproject'>
       <Newproject/>
       </Route>
       </Switch>
