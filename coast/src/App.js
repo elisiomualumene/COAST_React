@@ -3,8 +3,8 @@ import Company from './Components/Pages/Company'
 import Contato from './Components/Pages/Contato'
 import Newproject from './Components/Pages/Newproject'
 
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
-/*import {BrowserRouter as Switch} from 'react-router-dom'; não é mais utilizado, substituido pelo Routes*/
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+/*import {BrowserRouter as Switch} from 'react-router-dom'; não é mais utilizado na versão 6 do (react-router-dom), substituido pelo Routes*/
 
 
 function App() {
