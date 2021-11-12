@@ -4,6 +4,7 @@ import Contato from './Components/Pages/Contato'
 import Newproject from './Components/Pages/Newproject'
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Container from './Components/Layout/Container';
 /*import {BrowserRouter as Switch} from 'react-router-dom'; não é mais utilizado na versão 6 do (react-router-dom), substituido pelo Routes*/
 
 
@@ -13,6 +14,7 @@ function App() {
       <Home/>
       
       <Switch>
+      <Container customClass="min-height">
       <Route exact path='/'>
       <Home/>
       </Route>
@@ -28,7 +30,9 @@ function App() {
       <Route path='/Newproject'>
       <Newproject/>
       </Route>
+      </Container>
       </Switch>
+      <footer>footer</footer>
     </Router>
   );
 }
