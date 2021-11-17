@@ -1,0 +1,40 @@
+:root{
+    --color1: #ffbb33;
+    --color2: #222;
+    --color3: #fff;
+}
+
+.footer{
+    background-color: var(--color2);
+    color:var(--color3);
+    padding: 3em;
+    text-align: center;
+}
+
+.social_list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.social_list li {
+    margin: 0 1em;
+}
+
+.social_list li:hover{
+    color: var(--color1);
+}
+
+.social_list svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.copy_right{
+    margin-top: 2em;
+}
+
+.copy_right span{
+    font-weight: bold;
+    color: var(--color1);
+}
