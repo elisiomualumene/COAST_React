@@ -2,6 +2,7 @@ import Home from './Components/Pages/Home';
 import Company from './Components/Pages/Company'
 import Contato from './Components/Pages/Contato'
 import Project from './Components/Pages/Project'
+import Newproject from './Components/Pages/Newproject'
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Container from './Components/Layout/Container';
@@ -33,6 +34,10 @@ function App() {
 
             <Route path='/Contato'>
               <Contato/>
+            </Route>
+
+            <Route path='/Newproject'>
+              <Newproject/>
             </Route>
 
           </Container>
