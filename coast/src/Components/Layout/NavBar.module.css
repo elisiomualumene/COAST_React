@@ -9,10 +9,11 @@
     display: flex;
     list-style: none;
     align-items: center;
+    margin: auto;
 }
 
 .item{
-    margin-right: 1em;
+    margin-right: 5em;
 }
 
 .item a {
