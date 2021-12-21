@@ -4,10 +4,15 @@ const Select = ({text, name, options , handleOnChange, value}) => {
     return(
         <div className={style.select_control}>
             <label htmlFor={name}>{text}</label>
-            <select name={name} id={name}>
+            <select
+            name={name}
+            id={name}
+            onChange={handleOnChange}
+            value={value || ''}
+            >
             <option>Selecione uma Opção</option>
             {options.map((option) => (
-            <option value={option.id} keyd={option.id}> {option.name} </option>
+            <option value={option.id} key={option.id}>{option.name}</option>
             ))}
             </select>
         </div>

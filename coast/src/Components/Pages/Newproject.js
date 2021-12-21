@@ -1,11 +1,11 @@
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 import ProjetoForm from '../Projeto/ProjetoForm';
 import style from './Newprojects.module.css'
 
 const Newproject = () => {
 
 
-     const history = useHistory()
+     //const history = useHistory()
 
      function createPost(project){
         // initialize cost and services
@@ -13,11 +13,12 @@ const Newproject = () => {
         project.services = []
 
 
-        fetch('http://localhost:5000/prjects',{
-            methond: 'post',
+        fetch('http://localhost:5000/projects',{
+            methond: 'POST',
             headers: {
-                'contend-type':'application/json',
+                'Contend-type':'application/json',
             },
+            body: JSON.stringify(project),
         })
         .then((resp) => resp.json())
         .then((data) =>{
@@ -32,7 +33,7 @@ const Newproject = () => {
         <div className={style.newprojet_container}>
         <h1>Criar Projeto</h1>
         <p>Crie seu Projeto para depois adicionar os serviços</p>
-        <ProjetoForm btntext="Criar Projeto"/>
+        <ProjetoForm handleSubmit={createPost} btntext="Criar Projeto"/>
         </div>
     );
 }
