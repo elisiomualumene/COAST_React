@@ -5,7 +5,10 @@ const Select = ({text, name, options , handleOnChange, value}) => {
         <div className={style.select_control}>
             <label htmlFor={name}>{text}</label>
             <select name={name} id={name}>
-            <option>Slecione uma Opção</option>
+            <option>Selecione uma Opção</option>
+            {options.map((option) => (
+            <option value={option.id} keyd={option.id}> {option.name} </option>
+            ))}
             </select>
         </div>
     );
